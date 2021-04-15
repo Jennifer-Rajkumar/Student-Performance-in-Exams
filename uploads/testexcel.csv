@@ -1,0 +1,5 @@
+Student_Id,gender,race/ethnicity,parental level of education,lunch,test preparation course,math score,reading score,writing score,Total Score
+951,male,group C,master's degree,standard,none,71,67,67,205
+952,female,group A,high school,standard,none,61,105,63,192
+953,female,group E,some college,standard,none,87,85,60,265
+954,male,group E,some high school,standard,none,82,67,61,210
