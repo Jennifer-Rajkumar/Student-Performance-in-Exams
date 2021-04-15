@@ -1,0 +1,101 @@
+<html>
+<style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="file:///F:/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="logo"><span class="highlight">Trinity </span>School</div>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="#" class="highlight">Info</a></li>
+            <li><a href="{{url_for('predict')}}">Predict</a></li>
+        </ul>
+    </nav>
+    <div class="center">
+    <h2 align="center">Congratulations!</h2><br>
+    <img src="{{url_for('static',filename='images/pass.png')}}" class="img-rounded" alt="image" width="250" height="300"/>
+    <p class="center">According to our analysis, your performance is good. You just need to practise enough to remain in touch with the subjects and not lose your hold. Keep it up.</p>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h1 class="about">About Us</h1>
+                    <p>A web application developed by engineering students to predict the student’s performance in exam by analysing various features of the student.</p>
+
+                </div>
+
+                <div class="footer-items">
+                    <h2>Quick Links</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="#">Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Our Mission</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><a href="{{url_for('predict')}}">Predict</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Contact Us</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>20,ABC Street,Chennai</li>
+                        <li><i class="fa fa-phone fa-lg" aria-hidden="true"></i>1234567890</li>
+                        <li><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>support@trinityschools.com</li>
+                        <li></li>
+                    </ul>
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; Trinity School 2021.All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity School|Info</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css">
+    <!--<link rel="stylesheet" href="file:///F:/fontawesome-free-5.15.3-web/css/all.css"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><span class="highlight">Trinity </span>School</div>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="#" class="highlight">Info</a></li>
+            <li><a href="{{url_for('predict')}}">Predict</a></li>
+        </ul>
+    </nav>
+
+    <div class="info">
+        <div class="about-section">
+            <div class="inner-container">
+                <h1>Info Page</h1>
+                <p class="text">
+                    The ultimate goal of any educational institution is to offer the best educational experience and knowledge to the students. 
+                    Identifying the students who need extra support and taking the appropriate actions to enhance their performance plays an important role in achieving that goal. 
+                    In this web application, the random forest machine learning technique is used to build a classifier that can predict the performance of the students. 
+                    The model's accuracy is measured by computing classification error, precision, recall, and the F measure.
+                </p>
+                <p class="text">
+                    The dataset used to build the model contains the student ID, the gender of the student, the race/ethnicity of the student, the level of education of their parents, the type of lunch they ate, the completion of the test preparation course, etc. 
+                    The user can either give individual student details or upload a CSV file containing the details of all students. The input is collected and the machine learning model predicts the student's performance and displays the output. If the user uploads a CSV file, then the output can be downloaded as a pdf containing student ID and pass/fail column. 
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+		<h2 class="text-dark ">CSV or EXCEL File Format</h2>
+	</div>
+    <div class="p-3" id="table">
+		<table class="table table-hover">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Columns</th>
+					<th scope="col">Representation</th>
+					<th scope="col">Possible Values</th>
+				</tr>
+			</thead>
+			<tbody>
+			    <tr>
+					<td>Student ID</td>
+					<td>Student_Id</td>
+					<td>String</td>
+				</tr>	        
+				<tr>
+					<td>Gender</td>
+					<td>gender</td>
+					<td>male</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>female</td>
+				</tr>
+				<tr>
+					<td>Race/Ethnicity</td>
+					<td>race/ethnicity</td>
+					<td>group A</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>group B</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>group C</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>group D</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>group E</td>
+				</tr>
+				<tr>
+					<td>Parental level of Education</td>
+					<td>parental level of education</td>
+					<td>master's degree</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>bachelor's degree</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>associate’s degreee</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>some college</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>high school</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>some high school</td>
+				</tr>
+				<tr>
+					<td>Lunch</td>
+					<td>lunch</td>
+					<td>standard</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>free/reduced</td>
+				</tr>
+				<tr>
+					<td>Test Preparation Course</td>
+					<td>test preparation course</td>
+					<td>none</td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td>completed</td>
+				</tr>
+				<tr>
+					<td>Math Score</td>
+					<td>math score</td>
+					<td>Integer(out of 100)</td>
+				</tr>
+				<tr>
+					<td>Reading Score</td>
+					<td>reading score</td>
+					<td>Integer(out of 100)</td>
+				</tr>
+				<tr>
+					<td>Writing Score</td>
+					<td>writing score</td>
+					<td>Integer(out of 100)</td>
+				</tr>
+				<tr>
+					<td>Total Score</td>
+					<td>Total Score</td>
+					<td>Integer(out of 300)</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<center>
+    <p class="text-danger">Note: All the columns in the CSV or EXCEL file are case-sensitive. So follow the representation and possible values column.</p><br>
+    </center>
+    <div class="container">
+		<h2 class="text-dark ">Example Format</h2>
+	</div>
+	<center>
+    <img src="{{ url_for('static',filename='images/example.png') }}"/><br><br><br><br><br>
+    </center>
+    <footer>
+        <div class="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h1 class="about">About Us</h1>
+                    <p>A web application developed by engineering students to predict the student’s performance in exam by analysing various features of the student.</p>
+
+                </div>
+
+                <div class="footer-items">
+                    <h2>Quick Links</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="#">Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Our Mission</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><a href="{{url_for('predict')}}">Predict</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Contact Us</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>20,ABC Street,Chennai</li>
+                        <li><i class="fa fa-phone fa-lg" aria-hidden="true"></i>1234567890</li>
+                        <li><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>support@trinityschools.com</li>
+                        <li></li>
+                    </ul>
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; Trinity School 2021.All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

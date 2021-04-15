@@ -1,0 +1,208 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="file:///F:/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><span class="highlight">Trinity </span>School</div>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('info')}}">Info</a></li>
+            <li><a href="#" class="highlight">Predict</a></li>
+        </ul>
+    </nav>
+	
+	<div class="wrapper">
+        <div class="title">
+            Student Data File
+        </div>
+		<form action="{{url_for('get_csv_result')}}" method="post" enctype="multipart/form-data">
+			<div class="form">
+				<div class="input_field">
+					<label for="">Upload File</label>
+					<input type="file" name="csv_file" class="input" accept=".csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required>
+				</div>
+				<a href="{{ url_for('info', _anchor = 'table') }}" class="h8 text-warning text-decoration-none">*Note : Refer info page for CSV or Excel File format</a>
+				<div class="input_field">
+					<input type="submit" value="Predict" class="button">
+				</div>
+			</div>
+		</form>
+		<hr style="background-color:white;">
+		<center><h5>- OR -</h5></center>
+		<hr style="background-color:white;">
+        <div class="title">
+            Student Details
+        </div>
+		<form action="{{url_for('get_result')}}" method="post">
+			<div class="form">
+				<div class="input_field">
+					<label for="">Name</label>
+					<input type="text" name="name" class="input">
+				</div>
+
+				<div class="input_field">
+					<label for="">Registration Number</label>
+					<input type="text" name="reg_no" class="input">
+				</div>
+
+				<div class="input_field">
+					<label for="">Gender*</label>
+					<div class="custom_select">
+						<select name="gender" id="" required>
+							<option value="">Select</option>
+							<option value="2">Male</option>
+							<option value="1">Female</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input_field">
+					<label for="">Lunch*</label>
+					<div class="custom_select">
+						<select name="lunch" id="" required>
+							<option value="">Select</option>
+							<option value="2">Standard</option>
+							<option value="1">Free/Reduced</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input_field">
+					<label for="">Parent Education*</label>
+					<div class="custom_select">
+						<select name="parent_education" id="" required>
+							<option value="">Select</option>
+							<option value="4">Master's Degree</option>
+							<option value="2">Bachelor's Degree</option>
+							<option value="1">Associate's Degree</option>
+							<option value="5">Some College</option>
+							<option value="3">High School</option>
+							<option value="6">Some High School</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input_field">
+					<label for="">Race/Ethnicity</label>
+					<div class="custom_select">
+						<select name="ethnicity" id="">
+							<option value="0">Select</option>
+							<option value="5">Group A</option>
+							<option value="4">Group B</option>
+							<option value="3">Group C</option>
+							<option value="2">Group D</option>
+							<option value="1">Group E</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input_field">
+					<label for="">Test Preparation Course*</label>
+					<div class="custom_select">
+						<select name="test_preparation" id="" required>
+							<option value="">Select</option>
+							<option value="2">None</option>
+							<option value="1">Completed</option>
+						</select>
+					</div>
+				</div>
+				<div class="input_field">
+					<label for="">Math Score*</label>
+					<input type="text" name="math_score" class="input" required>
+				</div>
+
+				<div class="input_field">
+					<label for="">Reading Score*</label>
+					<input type="text" name="reading_score" class="input" required>
+				</div>
+
+				<div class="input_field">
+					<label for="">Writing Score*</label>
+					<input type="text" name="writing_score" class="input" required>
+				</div>
+				
+				<a href="#" class="h8 text-warning text-decoration-none">*Mandatory</a><br>
+				<a href="#" class="h8 text-warning text-decoration-none">*All scores are out of 100</a>
+				
+				<div class="input_field">
+					<input type="submit" value="Predict" class="button">
+				</div>
+			</div>
+		</form>
+    </div>
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h1 class="about">About Us</h1>
+                    <p>A web application developed by engineering students to predict the student’s performance in exam by analysing various features of the student.</p>
+
+                </div>
+
+                <div class="footer-items">
+                    <h2>Quick Links</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('info')}}">Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Our Mission</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><a href="#">Predict</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Contact Us</h2>
+                    <div class="borde"></div>
+                    <ul>
+                        <li><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>20,ABC Street,Chennai</li>
+                        <li><i class="fa fa-phone fa-lg" aria-hidden="true"></i>1234567890</li>
+                        <li><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>support@trinityschools.com</li>
+                        <li></li>
+                    </ul>
+                    <div class="social-media">
+                        <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                Copyright &copy; Trinity School 2021.All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
